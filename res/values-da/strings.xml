@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">Toggle2G</string>
+	<string-array name="battery_entries">
+		<item>Off</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+		<item>50%</item>
+		<item>60%</item>
+		<item>70%</item>
+		<item>80%</item>
+		<item>90%</item>
+	</string-array>
+	<string-array name="battery_values">
+		<item>0</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+		<item>70</item>
+		<item>80</item>
+		<item>90</item>
+	</string-array>
+	<string-array name="delay_entries">
+		<item>2 Referat</item>
+		<item>5 Referat</item>
+		<item>10 Referat</item>
+		<item>15 Referat</item>
+		<item>20 Referat</item>
+		<item>30 Referat</item>
+	</string-array>
+	<string-array name="delay_values">
+		<item>2</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+	<string-array name="networks_entries">
+		<item>Prioriter WCDMA (3G/2G)</item>
+		<item>Kun GSM (2G)</item>
+		<item>Kun WCDMA (3G)</item>
+		<item>GSM Auto (PRL) (2G/3G)</item>
+		<item>CDMA Auto (PRL)</item>
+		<item>Kun CDMA</item>
+		<item>Kun EVDO</item>
+		<item>Auto GSM/CDMA (PRL)</item>
+	</string-array>
+	<string-array name="networks_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<string name="plugin_name">Toggle 2G</string>
+	<string name="pref_title">Optioner Toggle 2G</string>
+	<string name="pref_title_enableService">2G/3G Auto Management</string>
+	<string name="pref_sum_enableService">Aktivere eller deaktivere den automatiske regulering af 2G/3G</string>
+	<string name="pref_title_wait4user">Manuelt slå 3G</string>
+	<string name="pref_sum_wait4user">Tilbage manuelt 3G</string>
+	<string name="pref_title_wait4userNotification">Aktiver med anmeldelsen bar</string>
+	<string name="pref_sum_wait4userNotification">Brug meddelelsen for manuelt at skifte tilbage til 3G</string>
+	<string name="pref_title_delay2GEnabled">2G når du slukker skærmen</string>
+	<string name="pref_sum_delay2GEnabled">Skift til 2G, når skærmen er slukket</string>
+	<string name="pref_title_delay2GTime">Display off forsinkelse</string>
+	<string name="pref_sum_delay2GTime">Tiden vil passere fra skærmen slukker, før du skifter til 2G</string>
+	<string name="pref_title_batteryLevelEnabled">2G når lavt batteri</string>
+	<string name="pref_sum_batteryLevelEnabled">Gøre det muligt at forblive i 2G når batteriet er lavt</string>
+	<string name="pref_title_batteryLevel">Batteri Niveau</string>
+	<string name="pref_sum_batteryLevel">Batteri niveau, der udløser 2G</string>
+	<string name="pref_title_2g_wifi">2G når WiFi er aktiveret</string>
+	<string name="pref_sum_2g_wifi">Aktiver for at skifte til 2G når du bruger WiFi</string>
+	<string name="pref_title_kbps_enabled">2G Når du ikke bruger nettet</string>
+	<string name="pref_sum_kbps_enabled">Ingen ændring til 2G, hvis netværket bliver brugt</string>
+	<string name="pref_title_kbps">Tærskel KBps netværk</string>
+	<string name="pref_sum_kbps">Brug Network KBps hvilket forhindrer aktivering af 2G</string>
+	<string name="pref_title_dontCheckPluggedIn">2G ved indlæsning</string>
+	<string name="pref_sum_dontCheckPluggedIn">Hop til 2G, selvom telefonen oplades</string>
+	<string name="pref_title_network2gselect">2G netværk</string>
+	<string name="pref_sum_network2gselect">Netværket til at anvende til at udvælge 2G-mode</string>
+	<string name="pref_title_network3gselect">3G netværk</string>
+	<string name="pref_sum_network3gselect">Netværket til at anvende til at udvælge de 3G-mode</string>
+	<!-- Let the use know the plugin needs to be downloaded -->
+	<string name="missingPlugin_title">Manglende anmeldelse plugin</string>
+	<string name="missingPlugin_message">Toggle 2G der kræves for at aktivere et plugin for at aktivere denne funktion. Vil du hente den nu?</string>
+	<string name="missingPlugin_download">Hent</string>
+	<string name="missingPlugin_cancel">Annuller</string>
+	<!-- Used by Tasker and Locale to show current setting -->
+	<string name="tasker_auto">Automatisk</string>
+	<string name="tasker_2g">Kun 2G</string>
+	<string name="tasker_3g">Tillad 3G</string>
+	<string name="tasker_network">Netværk:  <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G When Data is off</string>
+    <string name="pref_sum_2g_dataoff">Switch to 2G when data is turned off</string>
+    <string name="pref_title_dataoff_switch">Data off to switch</string>
+    <string name="pref_sum_dataoff_switch">Turn data off to switch networks</string>
+    <string name="pref_title_when2Switch">When to Activate 3G</string>
+    <string name="pref_sum_when2Switch">What triggers automatic switch back to 3G</string>
+    
+    <string-array name="auto_activate_entries">
+        <item>Screen On</item>
+        <item>Phone Unlock</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

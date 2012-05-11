@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Toggle2G</string>
+
+    <string-array name="battery_entries">
+        <item>Off</item>
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+    </string-array>
+    <string-array name="battery_values">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="delay_entries">
+        <item>2 Minuten</item>
+        <item>5 Minuten</item>
+        <item>10 Minuten</item>
+        <item>15 Minuten</item>
+        <item>20 Minuten</item>
+        <item>30 Minuten</item>
+    </string-array>
+    <string-array name="delay_values">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="networks_entries">
+        <item>WCDMA preferred (3G/2G)</item>
+        <item>GSM only (2G)</item>
+        <item>WCDMA only (3G)</item>
+        <item>GSM auto (PRL)(2G/3G)</item>
+        <item>CDMA auto (PRL) </item>
+        <item>CDMA only</item>
+        <item>EvDo only</item>
+        <item>GSM/CDMA auto (PRL)</item>
+    </string-array>
+    <string-array name="networks_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="auto_activate_entries">
+        <item>Scherm aan</item>
+        <item>Phone Unlock</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+    <string name="plugin_name">Toggle 2G</string>
+    <string name="pref_title">Toggle 2G Opties</string>
+    <string name="pref_title_enableService">Auto 2G/3G wisselen</string>
+    <string name="pref_sum_enableService">Toggle 2G/3G regelt je connectie automatisch</string>
+    <string name="pref_title_wait4user">Manueel 3G activeren</string>
+    <string name="pref_sum_wait4user">Manueel naar 3G schakelen</string>
+    <string name="pref_title_wait4userNotification">Activeren met notificatie</string>
+    <string name="pref_sum_wait4userNotification">Gebruik de notificatie om terug 3G te gebruiken</string>
+    <string name="pref_title_delay2GEnabled">2G In Slaapstand</string>
+    <string name="pref_sum_delay2GEnabled">2G gebruien bij scherm uit</string>
+    <string name="pref_title_delay2GTime">Wachttijd bij scherm uit</string>
+    <string name="pref_sum_delay2GTime">Hoe lang wachten om terug te schakelen naar 2G na scherm uit</string>
+    <string name="pref_title_batteryLevelEnabled">2G Bij Lege Batterij</string>
+    <string name="pref_sum_batteryLevelEnabled">2G Behouden bij Lege Batterij</string>
+    <string name="pref_title_batteryLevel">Batterij niveau</string>
+    <string name="pref_sum_batteryLevel">Batterij Niveau dat 2G inschakelt</string>
+    <string name="pref_title_2g_wifi">2G Als Wifi Actief is</string>
+    <string name="pref_sum_2g_wifi">2G gebruiken als Wifi actief is</string>
+    <string name="pref_title_kbps_enabled">Geen 2G als dataconnectie in gebruik is</string>
+    <string name="pref_sum_kbps_enabled">Niet terugschakelen naar 2G als de connectie in gebruik is</string>
+    <string name="pref_title_kbps">Min. Netwerklimiet KBps</string>
+    <string name="pref_sum_kbps">Netwerkgebruik dat terugschakelen naar 2G voorkomt kb/sec</string>
+    <string name="pref_title_dontCheckPluggedIn">Terugschakelen bij opladen</string>
+    <string name="pref_sum_dontCheckPluggedIn">Ook naar 2G terugschakelen bij laden</string>
+    <string name="pref_title_network2gselect">2G Netwerk</string>
+    <string name="pref_sum_network2gselect">2G netwerk te gebruiken</string>
+    <string name="pref_title_network3gselect">3G Netwerk</string>
+    <string name="pref_sum_network3gselect">3G netwerk te gebruiken</string>
+    
+    <!-- Let the use know the plugin needs to be downloaded -->
+    <string name="missingPlugin_title">Notificatie Plug-in ontbreekt</string>
+    <string name="missingPlugin_message">Toggle 2G heeft een plug-in nodig hiervoor! Downloaden?</string>
+    <string name="missingPlugin_download">Download</string>
+    <string name="missingPlugin_cancel">Anuleer</string>
+    
+    <!-- Used by Tasker and Locale to show current setting -->
+    <string name="tasker_auto">Automatisch</string>
+    <string name="tasker_2g">2G Only</string>
+    <string name="tasker_3g">Allow 3G</string>
+    <string name="tasker_network">Netwerk: <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G Wanneer Data uit staat</string>
+    <string name="pref_sum_2g_dataoff">Naar 2G schaken als Data uit staat</string>
+    <string name="pref_title_dataoff_switch">Data off om te knn schakelen</string>
+    <string name="pref_sum_dataoff_switch">Data dient uitgeshakeld te worden om te kunnen switchen</string>
+    <string name="pref_title_when2Switch">Wanneer 3G inschakelen</string>
+    <string name="pref_sum_when2Switch">Waardoor terug naar 3G schakelen</string>
+    
+</resources>

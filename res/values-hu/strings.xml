@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">Toggle2G</string>
+	<string-array name="battery_entries">
+		<item>Off</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+		<item>50%</item>
+		<item>60%</item>
+		<item>70%</item>
+		<item>80%</item>
+		<item>90%</item>
+	</string-array>
+	<string-array name="battery_values">
+		<item>0</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+		<item>70</item>
+		<item>80</item>
+		<item>90</item>
+	</string-array>
+	<string-array name="delay_entries">
+		<item>2 Perc</item>
+		<item>5 Perc</item>
+		<item>10 Perc</item>
+		<item>15 Perc</item>
+		<item>20 Perc</item>
+		<item>30 Perc</item>
+	</string-array>
+	<string-array name="delay_values">
+		<item>2</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+	<string-array name="networks_entries">
+		<item>Rangsorolása WCDMA (3G/2G)</item>
+		<item>Csak GSM (2G)</item>
+		<item>Csak WCDMA (3G)</item>
+		<item>Auto GSM (PRL)(2G/3G)</item>
+		<item>Auto CDMA (PRL)</item>
+		<item>Csak CDMA</item>
+		<item>Csak EvDo</item>
+		<item>Auto GSM/CDMA (PRL)</item>
+	</string-array>
+	<string-array name="networks_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<string name="plugin_name">Toggle 2G</string>
+	<string name="pref_title">Beállítások Toggle 2G</string>
+	<string name="pref_title_enableService">Self-gazdálkodás 2G/3G</string>
+	<string name="pref_sum_enableService">Engedélyezése vagy tiltása az automatikus beállítás a 2G/3G</string>
+	<string name="pref_title_wait4user">Manuálisan kapcsolja ki a 3G</string>
+	<string name="pref_sum_wait4user">Vissza kézzel 3G</string>
+	<string name="pref_title_wait4userNotification">Aktiválja az értesítés sáv</string>
+	<string name="pref_sum_wait4userNotification">A bejelentést kézi váltás vissza a 3G</string>
+	<string name="pref_title_delay2GEnabled">2G, ha kikapcsolja a képernyőt</string>
+	<string name="pref_sum_delay2GEnabled">Váltás 2G, ha a kijelző ki van kapcsolva</string>
+	<string name="pref_title_delay2GTime">Kijelző kikapcsolása késleltetés</string>
+	<string name="pref_sum_delay2GTime">Az idő majd át a képernyő kikapcsol, amíg nem vált 2G</string>
+	<string name="pref_title_batteryLevelEnabled">2G, ha alacsony akkumulátor</string>
+	<string name="pref_sum_batteryLevelEnabled">Engedélyezze, hogy továbbra is a 2G, ha az akkumulátor töltöttsége alacsony</string>
+	<string name="pref_title_batteryLevel">Akkumulátor szint</string>
+	<string name="pref_sum_batteryLevel">Az akkumulátor töltöttségi szintje, ami elindítja a 2G</string>
+	<string name="pref_title_2g_wifi">2G, amikor a WiFi engedélyezve van</string>
+	<string name="pref_sum_2g_wifi">Engedélyezze váltani 2G, amikor a WiFi</string>
+	<string name="pref_title_kbps_enabled">2G Ha nem használja a hálózatot</string>
+	<string name="pref_sum_kbps_enabled">Nincs változás a 2G, ha a hálózat van használatban</string>
+	<string name="pref_title_kbps">Küszöb KBps hálózati</string>
+	<string name="pref_sum_kbps">A Hálózati KBps amely megakadályozza aktiválását 2G</string>
+	<string name="pref_title_dontCheckPluggedIn">2G betöltése közben</string>
+	<string name="pref_sum_dontCheckPluggedIn">Ugrás 2G, akkor is, ha a telefon töltődik</string>
+	<string name="pref_title_network2gselect">2G Hálózat</string>
+	<string name="pref_sum_network2gselect">Hálózat kiválasztásánál alkalmazhat, 2G módban</string>
+	<string name="pref_title_network3gselect">3G Hálózat</string>
+	<string name="pref_sum_network3gselect">Hálózat kiválasztásánál alkalmazhat, 3G módban</string>
+	<!-- Let the use know the plugin needs to be downloaded -->
+	<string name="missingPlugin_title">Hiányzó értesítés plugint</string>
+	<string name="missingPlugin_message">Toggle 2G aktiválásához szükséges egy plugin, hogy ezt a funkciót. Szeretné letölteni most?</string>
+	<string name="missingPlugin_download">Letöltés</string>
+	<string name="missingPlugin_cancel">Mégse</string>
+	<!-- Used by Tasker and Locale to show current setting -->
+	<string name="tasker_auto">Automatikusan</string>
+	<string name="tasker_2g">Csak 2G</string>
+	<string name="tasker_3g">Hagyjuk 3G</string>
+	<string name="tasker_network">Hálózat:  <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G When Data is off</string>
+    <string name="pref_sum_2g_dataoff">Switch to 2G when data is turned off</string>
+    <string name="pref_title_dataoff_switch">Data off to switch</string>
+    <string name="pref_sum_dataoff_switch">Turn data off to switch networks</string>
+    <string name="pref_title_when2Switch">When to Activate 3G</string>
+    <string name="pref_sum_when2Switch">What triggers automatic switch back to 3G</string>
+    
+    <string-array name="auto_activate_entries">
+        <item>Screen On</item>
+        <item>Phone Unlock</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

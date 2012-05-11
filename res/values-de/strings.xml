@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Toggle2G</string>
+
+    <string-array name="battery_entries">
+        <item>Aus</item>
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+    </string-array>
+    <string-array name="battery_values">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="delay_entries">
+        <item>2 Minuten</item>
+        <item>5 Minuten</item>
+        <item>10 Minuten</item>
+        <item>15 Minuten</item>
+        <item>20 Minuten</item>
+        <item>30 Minuten</item>
+    </string-array>
+    <string-array name="delay_values">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="networks_entries">
+        <item>WCDMA bevorzugt (3G/2G)</item>
+        <item>Nur GSM (2G)</item>
+        <item>Nur WCDMA (3G)</item>
+        <item>Auto GSM (PRL)(2G/3G)</item>
+        <item>Auto CDMA (PRL) </item>
+        <item>Nur CDMA</item>
+        <item>Nur EvDo</item>
+        <item>Auto GSM/CDMA (PRL)</item>
+    </string-array>
+    <string-array name="networks_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string name="plugin_name">Toggle 2G</string>
+    <string name="pref_title">Toggle 2G Options</string>
+    <string name="pref_title_enableService">Toggle2G aktivieren</string>
+    <string name="pref_sum_enableService">Automatischer Wechsel zwischen 2G/3G</string>
+    <string name="pref_title_wait4user">3G manuell aktivieren</string>
+    <string name="pref_sum_wait4user">Manueller Wechsel zurück auf 3G</string>
+    <string name="pref_title_wait4userNotification">3G über eine Benachrichtigung aktivieren</string>
+    <string name="pref_sum_wait4userNotification">Über eine Benachrichtigung in der Statusleiste manuell zurück auf 3G wechseln</string>
+    <string name="pref_title_delay2GEnabled">2G beim Ausschalten des Bildschirms</string>
+    <string name="pref_sum_delay2GEnabled">Auf 2G wechseln, wenn das Display aus ist</string>
+    <string name="pref_title_delay2GTime">Umschaltverzögerung wenn Display aus</string>
+    <string name="pref_sum_delay2GTime">Mit welcher Verzögerung auf 2G umgeschltet wird, sobald das Display aus ist</string>
+    <string name="pref_title_batteryLevelEnabled">2G bei schwachem Akku</string>
+    <string name="pref_sum_batteryLevelEnabled">Auf 2G wechseln und bleiben, wenn der Akku schwach ist</string>
+    <string name="pref_title_batteryLevel">Akkustand für 2G-Wechsel</string>
+    <string name="pref_sum_batteryLevel">Ab welchem Akkustand, 2G aktiviert wird</string>
+    <string name="pref_title_2g_wifi">2G wenn WiFi aktiv</string>
+    <string name="pref_sum_2g_wifi">Auf 2G wechseln, wenn eine aktive WLAN-Verbindung besteht</string>
+    <string name="pref_title_kbps_enabled">Kein Wechsel auf 2G während Datenübertragung</string>
+    <string name="pref_sum_kbps_enabled">Nicht auf 2G wechseln, wenn Daten via 3G übertragen werden</string>
+    <string name="pref_title_kbps">3G->2G Grenzwert in KB/s</string>
+    <string name="pref_sum_kbps">Erst auf 2G wechseln, wenn die 3G-Datenübertragung unterhalb des eingestellten KB/s-Wertes liegt</string>
+    <string name="pref_title_dontCheckPluggedIn">2G beim Laden</string>
+    <string name="pref_sum_dontCheckPluggedIn">Während des Ladevorgangs auf 2G wechseln</string>
+    <string name="pref_title_network2gselect">2G Netzwerk</string>
+    <string name="pref_sum_network2gselect">Auf welches Netzwerk im 2G-Modus gewechselt wird</string>
+    <string name="pref_title_network3gselect">3G Netzwerk</string>
+    <string name="pref_sum_network3gselect">Auf welches Netzwerk im 3G-Modus gewechselt wird</string>
+    
+    <!-- Let the use know the plugin needs to be downloaded -->
+    <string name="missingPlugin_title">Notification Plug-In nicht installiert</string>
+    <string name="missingPlugin_message">Um 2G via Statuszeilen-Benachrichtigung aktivieren zu können, bitte das Notification Plug-In installieren. Plug-In herunterladen?</string>
+    <string name="missingPlugin_download">Download</string>
+    <string name="missingPlugin_cancel">Abbrechen</string>
+    
+    <!-- Used by Tasker and Locale to show current setting -->
+    <string name="tasker_auto">Automatisch</string>
+    <string name="tasker_2g">Nur 2G</string>
+    <string name="tasker_3g">3G erlauben</string>
+    <string name="tasker_network">Network: <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G bei ausgeschalteter Datenverbindung</string>
+    <string name="pref_sum_2g_dataoff">Auf 2G wechseln, wenn die Datenverbindung deaktiviert wird</string>
+    <string name="pref_title_dataoff_switch">Datenverbindung beim Wechsel ausschalten</string>
+    <string name="pref_sum_dataoff_switch">Datenverbindung wird beim Wechsel auf 2G/3G kurz deaktiviert. Option aktvieren, wenn nach dem Wechsel die Datenverbindung nicht mehr funktioniert</string>
+    <string name="pref_title_when2Switch">Wann 3G aktiviert werden soll</string>
+    <string name="pref_sum_when2Switch">Wann auf 3G zurück gewechselt werden soll</string>
+    
+    <string-array name="auto_activate_entries">
+        <item>Display eingeschaltet</item>
+        <item>Display entsperrt</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

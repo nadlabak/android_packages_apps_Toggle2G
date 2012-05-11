@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">切换2G</string>
+	<string-array name="battery_entries">
+		<item>关闭</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+		<item>50%</item>
+		<item>60%</item>
+		<item>70%</item>
+		<item>80%</item>
+		<item>90%</item>
+	</string-array>
+	<string-array name="battery_values">
+		<item>0</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+		<item>70</item>
+		<item>80</item>
+		<item>90</item>
+	</string-array>
+	<string-array name="delay_entries">
+		<item>2分钟</item>
+		<item>5 分钟</item>
+		<item>10 分钟</item>
+		<item>15 分钟</item>
+		<item>20 分钟</item>
+		<item>30 分钟</item>
+	</string-array>
+	<string-array name="delay_values">
+		<item>2</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+	<string-array name="networks_entries">
+		<item>优先WCDMA（3G/2G）</item>
+		<item>只有GSM（2G）</item>
+		<item>只有 WCDMA (3G)</item>
+		<item>GSM汽车（PRL）（2G/3G）</item>
+		<item>汽车CDMA（PRL）</item>
+		<item>只有 CDMA</item>
+		<item>只有 EvDo</item>
+		<item>汽车GSM/ CDMA（PRL）</item>
+	</string-array>
+	<string-array name="networks_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<string name="plugin_name">切换 2G</string>
+	<string name="pref_title">选项 切换 2G</string>
+	<string name="pref_title_enableService">自我管理的2G/3G</string>
+	<string name="pref_sum_enableService">启用或禁用2G/3G自动调整</string>
+	<string name="pref_title_wait4user">手动转3G</string>
+	<string name="pref_sum_wait4user">回到手动3G</string>
+	<string name="pref_title_wait4userNotification">激活通知栏</string>
+	<string name="pref_sum_wait4userNotification">使用手动切换回3G的通知</string>
+	<string name="pref_title_delay2GEnabled">2G时关闭屏幕</string>
+	<string name="pref_sum_delay2GEnabled">切换到2G时，显示屏关闭</string>
+	<string name="pref_title_delay2GTime">显示关闭延迟</string>
+	<string name="pref_sum_delay2GTime">时间将通过从屏幕关闭，直到您切换到2G</string>
+	<string name="pref_title_batteryLevelEnabled">2G时低电池</string>
+	<string name="pref_sum_batteryLevelEnabled">启用以在2G保持电池电量不足时</string>
+	<string name="pref_title_batteryLevel">电池电量</string>
+	<string name="pref_sum_batteryLevel">电池电量触发2G</string>
+	<string name="pref_title_2g_wifi">2G无线上网时启用</string>
+	<string name="pref_sum_2g_wifi">启用切换到2G时使用WiFi</string>
+	<string name="pref_title_kbps_enabled">当不使用2G网络</string>
+	<string name="pref_sum_kbps_enabled">没有改变，如果2G网络正在使用</string>
+	<string name="pref_title_kbps">阈值KBps的网络</string>
+	<string name="pref_sum_kbps">使用网络KBps的这可防止2G激活</string>
+	<string name="pref_title_dontCheckPluggedIn">2G cuando carga</string>
+	<string name="pref_sum_dontCheckPluggedIn">跳转到2G，即使手机正在充电</string>
+	<string name="pref_title_network2gselect">2G网络</string>
+	<string name="pref_sum_network2gselect">网络时使用2G模式选择</string>
+	<string name="pref_title_network3gselect">3G网络</string>
+	<string name="pref_sum_network3gselect">网络使用时选择3G模式</string>
+	<!-- Let the use know the plugin needs to be downloaded -->
+	<string name="missingPlugin_title">失踪的通知插件</string>
+	<string name="missingPlugin_message">切换 2G 需要激活一个插件启用此功能。你想现在就下载？</string>
+	<string name="missingPlugin_download">下载</string>
+	<string name="missingPlugin_cancel">取消</string>
+	<!-- Used by Tasker and Locale to show current setting -->
+	<string name="tasker_auto">自动</string>
+	<string name="tasker_2g">2G只</string>
+	<string name="tasker_3g">允许3G</string>
+	<string name="tasker_network">网络:  <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G When Data is off</string>
+    <string name="pref_sum_2g_dataoff">Switch to 2G when data is turned off</string>
+    <string name="pref_title_dataoff_switch">Data off to switch</string>
+    <string name="pref_sum_dataoff_switch">Turn data off to switch networks</string>
+    <string name="pref_title_when2Switch">When to Activate 3G</string>
+    <string name="pref_sum_when2Switch">What triggers automatic switch back to 3G</string>
+    
+    <string-array name="auto_activate_entries">
+        <item>Screen On</item>
+        <item>Phone Unlock</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">Toggle2G</string>
+	<string-array name="battery_entries">
+		<item>Off</item>
+		<item>10%</item>
+		<item>20%</item>
+		<item>30%</item>
+		<item>40%</item>
+		<item>50%</item>
+		<item>60%</item>
+		<item>70%</item>
+		<item>80%</item>
+		<item>90%</item>
+	</string-array>
+	<string-array name="battery_values">
+		<item>0</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>60</item>
+		<item>70</item>
+		<item>80</item>
+		<item>90</item>
+	</string-array>
+	<string-array name="delay_entries">
+		<item>2 Minute</item>
+		<item>5 Minute</item>
+		<item>10 Minute</item>
+		<item>15 Minute</item>
+		<item>20 Minute</item>
+		<item>30 Minute</item>
+	</string-array>
+	<string-array name="delay_values">
+		<item>2</item>
+		<item>5</item>
+		<item>10</item>
+		<item>15</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+	<string-array name="networks_entries">
+		<item>Prioritizarea WCDMA (3G/2G)</item>
+		<item>Numai GSM (2G)</item>
+		<item>Numai WCDMA (3G)</item>
+		<item>Auto GSM (PRL)(2G/3G)</item>
+		<item>Auto CDMA (PRL)</item>
+		<item>Numai CDMA</item>
+		<item>Numai EvDo</item>
+		<item>Auto GSM/CDMA (PRL)</item>
+	</string-array>
+	<string-array name="networks_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<string name="plugin_name">Toggle 2G</string>
+	<string name="pref_title">Opţiuni Toggle 2G</string>
+	<string name="pref_title_enableService">Auto-gestionare a 2G/3G</string>
+	<string name="pref_sum_enableService">Activarea sau dezactivarea ajustarea automată a 2G/3G</string>
+	<string name="pref_title_wait4user">Manuală rândul său, 3G</string>
+	<string name="pref_sum_wait4user">Înapoi manual 3G</string>
+	<string name="pref_title_wait4userNotification">Activaţi cu bara de notificare</string>
+	<string name="pref_sum_wait4userNotification">Utilizaţi manual de notificare pentru comutare înapoi la 3G</string>
+	<string name="pref_title_delay2GEnabled">2G atunci când porniţi de pe ecran</string>
+	<string name="pref_sum_delay2GEnabled">A comuta la 2G atunci când ecranul este oprit</string>
+	<string name="pref_title_delay2GTime">Afişează off întârziere</string>
+	<string name="pref_sum_delay2GTime">Timpul va trece de la ecranul se stinge până când veţi comuta la 2G</string>
+	<string name="pref_title_batteryLevelEnabled">2G atunci când scăzut baterie</string>
+	<string name="pref_sum_batteryLevelEnabled">Permite să rămână în 2G atunci când bateria este descărcată</string>
+	<string name="pref_title_batteryLevel">Nivelul bateriei</string>
+	<string name="pref_sum_batteryLevel">Nivelul bateriei care declanseaza 2G</string>
+	<string name="pref_title_2g_wifi">2G atunci când este activat WiFi</string>
+	<string name="pref_sum_2g_wifi">Activare pentru a comuta la 2G atunci când se utilizează Internet WI-FI</string>
+	<string name="pref_title_kbps_enabled">Atunci când nu 2G prin intermediul reţelei</string>
+	<string name="pref_sum_kbps_enabled">Nici o schimbare la 2G în cazul în care reţeaua este utilizat</string>
+	<string name="pref_title_kbps">Prag KBps de reţea</string>
+	<string name="pref_sum_kbps">Utilizaţi KBps de reţea care împiedică activarea de 2G</string>
+	<string name="pref_title_dontCheckPluggedIn">2G atunci când încărcarea</string>
+	<string name="pref_sum_dontCheckPluggedIn">Salt la 2G, chiar dacă telefonul se încarcă</string>
+	<string name="pref_title_network2gselect">Retea 2G</string>
+	<string name="pref_sum_network2gselect">De reţea pentru a utiliza în vederea selectării modului 2G</string>
+	<string name="pref_title_network3gselect">Retea 3G</string>
+	<string name="pref_sum_network3gselect">De reţea pentru a utiliza în vederea selectării modului 3G</string>
+	<!-- Let the use know the plugin needs to be downloaded -->
+	<string name="missingPlugin_title">Lipseşte plugin notificare</string>
+	<string name="missingPlugin_message">Toggle 2G necesare pentru a activa un plugin pentru a activa această caracteristică. Doriţi să o descărcaţi acum?</string>
+	<string name="missingPlugin_download">Descarca</string>
+	<string name="missingPlugin_cancel">Anula</string>
+	<!-- Used by Tasker and Locale to show current setting -->
+	<string name="tasker_auto">în mod automat</string>
+	<string name="tasker_2g">Numai 2G</string>
+	<string name="tasker_3g">Permiteţi 3G</string>
+	<string name="tasker_network">Retea:  <xliff:g id="device_name">%1$s</xliff:g></string>
+
+    <string name="pref_title_2g_dataoff">2G When Data is off</string>
+    <string name="pref_sum_2g_dataoff">Switch to 2G when data is turned off</string>
+    <string name="pref_title_dataoff_switch">Data off to switch</string>
+    <string name="pref_sum_dataoff_switch">Turn data off to switch networks</string>
+    <string name="pref_title_when2Switch">When to Activate 3G</string>
+    <string name="pref_sum_when2Switch">What triggers automatic switch back to 3G</string>
+    
+    <string-array name="auto_activate_entries">
+        <item>Screen On</item>
+        <item>Phone Unlock</item>
+    </string-array>
+    <string-array name="auto_activate_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

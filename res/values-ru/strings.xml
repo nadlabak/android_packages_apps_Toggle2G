@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Toggle2G</string>
+    <string name="plugin_name">Toggle 2G</string>
+    <string name="pref_title">Настройки Toggle 2G</string>
+    <string name="pref_title_enableService">Автоуправление 2G/3G</string>
+    <string name="pref_sum_enableService">Дать право Toggle 2G управлять настройками 2G/3G автоматически</string>
+    <string name="pref_title_wait4user">Вкл. 3G вручную</string>
+    <string name="pref_sum_wait4user">Переключение на режим 3G вручную</string>
+    <string name="pref_title_wait4userNotification">Вкл. с Notification</string>
+    <string name="pref_sum_wait4userNotification">Использование плагина Notification для ручного переключения режимов</string>
+    <string name="pref_title_delay2GEnabled">2G после выкл. экрана</string>
+    <string name="pref_sum_delay2GEnabled">Переключение в режим 2G, когда дисплей выключен</string>
+    <string name="pref_title_delay2GTime">Задержка перекл.</string>
+    <string name="pref_sum_delay2GTime">Установка задержки включения 2G после выключения дисплея</string>
+    <string name="pref_title_batteryLevelEnabled">2G при разрядке</string>
+    <string name="pref_sum_batteryLevelEnabled">Переключение в режим 2G когда разряжен аккумулятор</string>
+    <string name="pref_title_batteryLevel">Уровень зарядки</string>
+    <string name="pref_sum_batteryLevel">Установка мин. уровня заряда аккумулятора для перехода в режим 2G</string>
+    <string name="pref_title_2g_wifi">2G при включенном Wi-Fi</string>
+    <string name="pref_sum_2g_wifi">Переключение на режим 2G при использовании Wi-Fi</string>
+    <string name="pref_title_kbps_enabled">Запрет 2G при исп. сети</string>
+    <string name="pref_sum_kbps_enabled">Не включать режим 2G, если сеть используется</string>
+    <string name="pref_title_kbps">Уровень исп.сети Kб/с</string>
+    <string name="pref_sum_kbps">Использование сети с уровнем выше указанных Kб/с предотвращает переход в режим 2G</string>
+    <string name="pref_title_dontCheckPluggedIn">2G при зарядке</string>
+    <string name="pref_sum_dontCheckPluggedIn">Разрешить переход в режим 2G, даже если телефон заряжается</string>
+    <string name="pref_title_network2gselect">Сеть 2G</string>
+    <string name="pref_sum_network2gselect">Предпочтительный тип сети 2G</string>
+    <string name="pref_title_network3gselect">Сеть 3G</string>
+    <string name="pref_sum_network3gselect">Предпочтительный тип сети 3G</string>
+    <string name="missingPlugin_title">Отсутствует плагин Notification</string>
+    <string name="missingPlugin_message">Для включения данной функции Toggle 2G необходим отсутствующий плагин Notification. Скачать?</string>
+    <string name="missingPlugin_download">Скачать</string>
+    <string name="missingPlugin_cancel">Отменить</string>
+    <string name="tasker_auto">Автоматически</string>
+    <string name="tasker_2g">Режим 2G</string>
+    <string name="tasker_3g">Режим 3G</string>
+    <string name="tasker_network">Сеть: %1$s</string>
+    <string name="pref_title_2g_dataoff">2G при выкл. передаче</string>
+    <string name="pref_sum_2g_dataoff">В режим 2G, когда передача данных выкл.</string>
+    <string name="pref_title_dataoff_switch">Выкл. передачу данных</string>
+    <string name="pref_sum_dataoff_switch">Выкл. передачу данных для переключения сети</string>
+    <string name="pref_title_when2Switch">Когда включать 3G</string>
+    <string name="pref_sum_when2Switch">Какой триггер автоматически переключает в режим 3G</string>
+</resources>

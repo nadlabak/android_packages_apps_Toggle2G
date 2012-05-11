@@ -1,0 +1,102 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pref_title" >
+        <CheckBoxPreference
+            android:key="enableService"
+            android:summary="@string/pref_sum_enableService"
+            android:title="@string/pref_title_enableService" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/auto_activate_entries"
+            android:entryValues="@array/auto_activate_values"
+            android:key="when2Switch"
+            android:summary="@string/pref_sum_when2Switch"
+            android:title="@string/pref_title_when2Switch" />
+        
+        <CheckBoxPreference
+            android:key="wait4user"
+            android:summary="@string/pref_sum_wait4user"
+            android:title="@string/pref_title_wait4user" />
+        <CheckBoxPreference
+            android:key="wait4userNotification"
+            android:summary="@string/pref_sum_wait4userNotification"
+            android:title="@string/pref_title_wait4userNotification" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="delay2GEnabled"
+            android:summary="@string/pref_title_when2Switch"
+            android:title="@string/pref_title_delay2GEnabled" />
+
+        <ListPreference
+            android:defaultValue="10"
+            android:entries="@array/delay_entries"
+            android:entryValues="@array/delay_values"
+            android:key="delay2GTime"
+            android:summary="@string/pref_sum_delay2GTime"
+            android:title="@string/pref_title_delay2GTime" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="batteryLevelEnabled"
+            android:summary="@string/pref_sum_batteryLevelEnabled"
+            android:title="@string/pref_title_batteryLevelEnabled" />
+
+        <ListPreference
+            android:defaultValue="30"
+            android:entries="@array/battery_entries"
+            android:entryValues="@array/battery_values"
+            android:key="batteryLevel"
+            android:summary="@string/pref_sum_batteryLevel"
+            android:title="@string/pref_title_batteryLevel" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="2g_wifi"
+            android:summary="@string/pref_sum_2g_wifi"
+            android:title="@string/pref_title_2g_wifi" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="2g_dataoff"
+            android:summary="@string/pref_sum_2g_dataoff"
+            android:title="@string/pref_title_2g_dataoff" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="kbps_enabled"
+            android:summary="@string/pref_sum_kbps_enabled"
+            android:title="@string/pref_title_kbps_enabled" />
+
+        <EditTextPreference
+            android:defaultValue="2"
+            android:inputType="number"
+            android:key="kbps"
+            android:persistent="true"
+            android:summary="@string/pref_sum_kbps"
+            android:title="@string/pref_title_kbps" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="dataoff_switch"
+            android:summary="@string/pref_sum_dataoff_switch"
+            android:title="@string/pref_title_dataoff_switch" />
+        <CheckBoxPreference
+            android:key="dontCheckPluggedIn"
+            android:summary="@string/pref_sum_dontCheckPluggedIn"
+            android:title="@string/pref_title_dontCheckPluggedIn" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/networks_entries"
+            android:entryValues="@array/networks_values"
+            android:key="network2gselect"
+            android:summary="@string/pref_sum_network2gselect"
+            android:title="@string/pref_title_network2gselect" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/networks_entries"
+            android:entryValues="@array/networks_values"
+            android:key="network3gselect"
+            android:summary="@string/pref_sum_network3gselect"
+            android:title="@string/pref_title_network3gselect" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

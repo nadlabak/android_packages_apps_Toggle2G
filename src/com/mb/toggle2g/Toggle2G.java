@@ -13,8 +13,6 @@
  */
 package com.mb.toggle2g;
 
-import com.mb.toggle2g.RootCommand.CommandResult;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -34,10 +32,6 @@ import android.util.Log;
 
 public class Toggle2G extends PreferenceActivity implements OnSharedPreferenceChangeListener, OnPreferenceClickListener
 {
-    private static final String APP_FOLDER = "/data/data/com.mb.toggle2g";
-    private static final String SHARED_PREFS_FOLDER = APP_FOLDER + "/shared_prefs";
-    private static final String SHARED_PREFS_FILE = APP_FOLDER + "/shared_prefs/com.mb.toggle2g_preferences.xml";
-
     SharedPreferences DEFAULT_SHARED_PREFERENCES;
 
     static int network2GSelect = 1;
@@ -74,8 +68,6 @@ public class Toggle2G extends PreferenceActivity implements OnSharedPreferenceCh
 
         addPreferencesFromResource(R.xml.preference);
 
-        preparePreferences(this);
-
         DEFAULT_SHARED_PREFERENCES = PreferenceManager.getDefaultSharedPreferences(this);
         DEFAULT_SHARED_PREFERENCES.registerOnSharedPreferenceChangeListener(this);
 
@@ -109,8 +101,6 @@ public class Toggle2G extends PreferenceActivity implements OnSharedPreferenceCh
         p = getPreferenceScreen().findPreference("wait4userNotification");
         p.setOnPreferenceClickListener(this);
 
-        // boolean service = getPrefs( this ).getBoolean("enableService",
-        // false);
         boolean service = DEFAULT_SHARED_PREFERENCES.getBoolean("enableService", false);
         if (service)
         {
@@ -128,34 +118,6 @@ public class Toggle2G extends PreferenceActivity implements OnSharedPreferenceCh
         }
         catch (Exception e)
         {
-        }
-    }
-
-    public static void preparePreferences(final Context context)
-    {
-        try
-        {
-            PreferenceManager.getDefaultSharedPreferences(context);
-
-            RootCommand cmd = new RootCommand();
-            if (cmd.canSU())
-            {
-                CommandResult runWaitFor = cmd.su.runWaitFor("mkdir " + SHARED_PREFS_FOLDER);
-                Log.i(TOGGLE2G, "mkdir " + SHARED_PREFS_FOLDER + ": " + runWaitFor.stdout);
-                
-                runWaitFor = cmd.su.runWaitFor("chmod 777 " + APP_FOLDER);
-                Log.i(TOGGLE2G, "chmod 777 " + APP_FOLDER + ": " + runWaitFor.stdout);
-
-                runWaitFor = cmd.su.runWaitFor("chmod 777 " + SHARED_PREFS_FOLDER);
-                Log.i(TOGGLE2G, "chmod 777 " + SHARED_PREFS_FOLDER + ": " + runWaitFor.stdout);
-
-                runWaitFor = cmd.su.runWaitFor("chmod 777 " + SHARED_PREFS_FILE);
-                Log.i(TOGGLE2G, "chmod 777 " + SHARED_PREFS_FILE + ": " + runWaitFor.stdout);
-            }
-        }
-        catch (Exception e)
-        {
-            Log.e(TOGGLE2G, "error prcessing preferences directory", e);
         }
     }
 
@@ -307,9 +269,5 @@ public class Toggle2G extends PreferenceActivity implements OnSharedPreferenceCh
         network2GSelect = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(context).getString("network2gselect", "1"));
         network3GSelect = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(context).getString("network3gselect", "0"));
     }
-
-    public static SharedPreferences getPrefs(Context context)
-    {
-        return context.getSharedPreferences("com.mb.toggle2G", Context.MODE_WORLD_WRITEABLE);
-    }
 }
+

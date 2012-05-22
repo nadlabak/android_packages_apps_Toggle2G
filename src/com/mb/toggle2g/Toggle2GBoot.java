@@ -26,9 +26,7 @@ public class Toggle2GBoot extends BroadcastReceiver
 		boolean service = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("enableService", false);
 		
 //		Log.i(Toggle2G.TOGGLE2G, "boot service=" + service);
-		if ( service )
-		{
-	        Toggle2G.preparePreferences(context);
+		if ( service ) {
 			Toggle2GService.checkLockService(context, true);
 		}
 	}

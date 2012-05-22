@@ -119,5 +119,6 @@
     <string name="pref_sum_dataoff_switch">Turn data off to switch networks</string>
     <string name="pref_title_when2Switch">When to Activate 3G</string>
     <string name="pref_sum_when2Switch">What triggers automatic switch back to 3G</string>
-    
+
 </resources>
+

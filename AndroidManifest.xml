@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-	<!-- 
-	android:sharedUserId="android.uid.system"
- -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	android:sharedUserId="android.uid.system" android:installLocation="internalOnly"
+	android:sharedUserId="android.uid.phone" android:installLocation="internalOnly"
 	android:versionCode="9000002005"
 	android:versionName="0.2.5" 
 	package="com.mb.toggle2g">
-
-	<original-package android:name="com.android.phone" />
-	<uses-sdk android:minSdkVersion="8" />
 
 	<!--
 		This tells the activity manager to not delay any of our activity start
@@ -22,8 +16,7 @@
 
 	<application android:icon="@drawable/icon" android:process="com.android.phone"
 		android:label="@string/app_name">
-		<activity android:name=".Toggle2G" android:label="@string/app_name"
-			android:launchMode="singleTask" android:process="com.android.phone">
+		<activity android:name=".Toggle2G" android:label="@string/app_name">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
@@ -31,50 +24,29 @@
 		</activity>
 
 		<service android:name=".Toggle2GService" android:label="@string/app_name"
-			android:persistent="true" android:process="com.android.phone"
-			android:exported="true">
+			android:persistent="true" android:exported="true">
 		</service>
 
-		<receiver android:name=".Toggle2GBoot" android:process="com.android.phone">
+		<receiver android:name=".Toggle2GBoot">
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</receiver>
 
-		<receiver android:name=".Toggle2GNotificationReceiver" android:process="com.android.phone">
+		<receiver android:name=".Toggle2GNotificationReceiver">
 			<intent-filter>
 				<action android:name="com.mb.notification.ENABLE_3G" />
 			</intent-filter>
 		</receiver>
 
-		<receiver android:name=".Toggle2GWidgetReceiver" android:process="com.android.phone">
+		<receiver android:name=".Toggle2GWidgetReceiver">
 			<intent-filter>
 				<action android:name="com.mb.toggle.widget.COMMAND" />
 			</intent-filter>
 		</receiver>
 
-		<!--
-			This is the "edit" Activity. The mdpi icon should be 32x32. The hdpi
-			icon should be 48x48. Locale will scale the icons if necessary, but
-			providing pre-scaled versions will improve quality and performance.
-		-->
-		<activity android:name=".locale.LocaleEditActivity" android:label="@string/plugin_name"
-			android:icon="@drawable/icon" android:theme="@android:style/Theme.Dialog">
-			<!--
-				this Intent filter allows the plug-in to be discovered by Locale
-			-->
-			<intent-filter>
-				<action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
-			</intent-filter>
-		</activity>
-		<!-- This is the "fire" BroadcastReceiver -->
-		<receiver android:name=".locale.LocaleFireReceiver" android:process="com.android.phone">
-			<!-- this Intent filter allows the plug-in to be fired -->
-			<intent-filter>
-				<action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
-			</intent-filter>
-		</receiver>
 	</application>
 
-</manifest> 
+</manifest>
+

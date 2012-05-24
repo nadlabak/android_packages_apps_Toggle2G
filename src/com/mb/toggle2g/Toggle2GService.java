@@ -38,7 +38,7 @@ public class Toggle2GService extends Service
 {
 	static final String DEFAULT_2G_LOW_BATTERY = "30";
 	static final String DEFAULT_2G_SLEEP_DELAY = "10";
-	static final int DELAY_SECONDS_2G_ON_WIFI_ON = 30;
+	static final int DELAY_SECONDS_2G_ON_WIFI_ON = 5;
 	static final String ACTION_SHOW_NOTIFICATION = "com.mb.notification.CONTROL";
 
 	static Toggle2GService running = null;
@@ -46,7 +46,7 @@ public class Toggle2GService extends Service
 	boolean isScreenOff = false;
 	long screenOffTime = 0;
 	long wifiOnTime = 0;
-	
+
 	int mBatteryLevel = 100;
 	int phoneState = TelephonyManager.CALL_STATE_IDLE;
 	boolean isPluggedIn = true;
@@ -69,7 +69,7 @@ public class Toggle2GService extends Service
 	SetPhoneSettingsV2 phoneSetter;
 	TelephonyManager telephonyManager;
 	SharedPreferences preferences;
-	
+
 	boolean timerRegistered = true;
 
 	public class LocalBinder extends Binder
@@ -117,21 +117,21 @@ public class Toggle2GService extends Service
 		IntentFilter intentFilter = new IntentFilter(WifiManager.WIFI_STATE_CHANGED_ACTION);
 		intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
 		registerReceiver(wifiReceiver, intentFilter);
-		
+
 		registerReceiver(phoneReceiver, new IntentFilter(TelephonyManager.ACTION_PHONE_STATE_CHANGED));
 		registerReceiver(batteryReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 		registerReceiver(lockReceiver, new IntentFilter(Intent.ACTION_SCREEN_OFF));
-		
+
 		IntentFilter screenOn = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenOn.addAction(Intent.ACTION_USER_PRESENT);
         registerReceiver(unlockReceiver, screenOn);
-		
+
         isMobileDataEnabled = phoneSetter.getMobileData(this);
 		registerReceiver(backgrounDataListener, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
-		
+
 		registerReceiver(timeReceiver, new IntentFilter(Intent.ACTION_TIME_TICK));
 		timerRegistered = true;
- 
+
 		//Log.i(Toggle2G.TOGGLE2G, "notfyPlugin()");
 		Intent notifyIntent = new Intent(Toggle2GWidgetReceiver.SET_ACTION);
 		notifyIntent.putExtra("setting", "auto");
@@ -174,7 +174,7 @@ public class Toggle2GService extends Service
 			{
 				Toggle2GService.showNotification( context, false );
 			}
-			
+
 			set2g("screen turned off");
 		}
 	}
@@ -194,7 +194,7 @@ public class Toggle2GService extends Service
 			else if ( intent.getAction().equals(Intent.ACTION_USER_PRESENT ))
 			{
 			    System.out.println("ACTION_USER_PRESENT " + preferences.getString("when2Switch", "0"));
-			    if ( "1".equals(preferences.getString("when2Switch", "0"))) 
+			    if ( "1".equals(preferences.getString("when2Switch", "0")))
 			    {
 	                set3gNow("screen unlocked", true);
 			    }
@@ -202,7 +202,7 @@ public class Toggle2GService extends Service
 			else
 			{
                 System.out.println("NOT ACTION_USER_PRESENT " + preferences.getString("when2Switch", "0"));
-                if ( "0".equals(preferences.getString("when2Switch", "0"))) 
+                if ( "0".equals(preferences.getString("when2Switch", "0")))
                 {
                     set3gNow("screen turned on", true);
                 }
@@ -240,7 +240,7 @@ public class Toggle2GService extends Service
             {
                 isMobileDataEnabled = phoneSetter.getMobileData(context);
                 Log.i(Toggle2G.TOGGLE2G, "isMobileDataEnabled=" + isMobileDataEnabled);
-                
+
                 if (!isMobileDataEnabled)
                 {
                     Toggle2GService.showNotification( context, false );
@@ -294,7 +294,7 @@ public class Toggle2GService extends Service
 		{
 			networkInfo = intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);
 			isWifiOn = (networkInfo != null && wifiManager.isWifiEnabled() && networkInfo.isConnectedOrConnecting());
-			
+
 			if( isWifiOn )
 			{
 				if (wifiOnTime == 0)
@@ -304,7 +304,7 @@ public class Toggle2GService extends Service
 			}
 			else
 			{
-				 wifiOnTime = 0; 
+				 wifiOnTime = 0;
 			}
 
 			if (noWifi() || noData() || saveBattery())
@@ -389,13 +389,13 @@ public class Toggle2GService extends Service
 			boolean saveBattery = saveBattery();
             boolean checkWifi = noWifi();
             boolean checkDataOff = noData();
-			
+
 			// Log.i(Toggle2G.TOGGLE2G, "set2g " + !is2g + ", " + !isPluggedIn() + ", " + isScreenOff + ", " + isWifiOn );
 			if (isScreenOff || checkWifi || checkDataOff || saveBattery)
 			{
 				boolean delayScreenOffEnough = delayScreenOffEnough();
 				boolean delayWifiEnough = checkWifi && delayWifiOffEnough();
-				
+
 				// Log.i(Toggle2G.TOGGLE2G, "delay or low battery check " + delayEnough + ", " + saveBattery + "," + delayWifiEnough);
 				if (delayScreenOffEnough || saveBattery || delayWifiEnough || checkDataOff)
 				{
@@ -443,7 +443,7 @@ public class Toggle2GService extends Service
     {
         return isWifiOn && preferences.getBoolean("2g_wifi", true);
     }
-	
+
 	private void set2gNow(String reason)
 	{
 		if ( phoneState == TelephonyManager.CALL_STATE_IDLE && telephonyManager.getCallState() == TelephonyManager.CALL_STATE_IDLE )
@@ -465,7 +465,7 @@ public class Toggle2GService extends Service
 			{
 				phoneSetter.set3g(reason, preferences.getBoolean("dataoff_switch", true) );
 			}
-			else  
+			else
 			{
 				phoneSetter.getNetwork();
 			}
@@ -481,13 +481,13 @@ public class Toggle2GService extends Service
 		boolean wait = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("wait4user", false);
 		boolean waitNotify = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("wait4userNotification", false);
 		boolean running = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("enableService", false);
-		
+
 		if ( running && ( Toggle2GService.running.noWifi() || Toggle2GService.running.noData() || Toggle2GService.running.saveBattery() ))
 		{
 			// no 3G if wifi or battery saver
 			show = false;
 		}
-		
+
 		Intent notifyIntent = new Intent(ACTION_SHOW_NOTIFICATION);
 		//Log.i(Toggle2G.TOGGLE2G, "make notification=" + ( running && wait && show ));
 		notifyIntent.putExtra("show", running && wait && waitNotify && show);
@@ -511,10 +511,10 @@ public class Toggle2GService extends Service
 	public static boolean isNotificationAppInstalled( Context context )
 	{
 		Intent notifyIntent = new Intent(Toggle2GService.ACTION_SHOW_NOTIFICATION);
-		List<ResolveInfo> list = context.getPackageManager().queryBroadcastReceivers(notifyIntent, 0);  
+		List<ResolveInfo> list = context.getPackageManager().queryBroadcastReceivers(notifyIntent, 0);
 		return ( list.size() > 0 );
 	}
-	
+
 	public static boolean isRunning()
 	{
 		return running != null;
@@ -540,14 +540,14 @@ public class Toggle2GService extends Service
 		catch (InterruptedException e)
 		{
 		}
-		
+
 		long timeDiff = System.currentTimeMillis() - timeBefore ;
 		long bytesDiff = Math.max( TrafficStats.getTotalRxBytes() - bytesRx, TrafficStats.getTotalTxBytes() - bytesTx );
-		
+
 		bytesDiff *= 1000;
-		
+
 		long kbps = ( bytesDiff / timeDiff ) / 1024;
-		
+
 		if ( kbps >= wait )
 		{
 			// < 0 means it didn't meet the low threshold
